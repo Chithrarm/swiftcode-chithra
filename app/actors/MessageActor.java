@@ -37,7 +37,7 @@ public class MessageActor extends UntypedActor {
             String keyword = agentService
                     .getAgentResponse((String) message).keyword;
             if(!Objects.equals(keyword, "NOT_FOUND")){
-                FeedResponse feedResponse = feedService.getFeedResponse(keyword);
+                FeedResponse feedResponse = feedService.feedResponse(keyword);
                 messageObject.text = (feedResponse.title == null) ? "No results found" : "Showing results for: " + keyword;
                 messageObject.feedResponse = feedResponse;
                 messageObject.sender = Message.Sender.BOT;

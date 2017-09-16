@@ -10,7 +10,7 @@
 <body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">
 
    <md-card flex="none" layout="column">
-       <md-content flex="90" id="message-pane" style="width:800px; background:url(https://media.giphy.com/media/CaiVJuZGvR8HK/giphy.gif);background-repeat: no-repeat; background-size:cover;">
+       <md-content flex="90" id="message-pane" style="width:800px; background:url(https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif);background-repeat: no-repeat; background-size:cover;">
        <div ng-repeat="message in messages" layout="column"
        layout-align="{{message.sender=='BOT' ? 'start start' : 'start end'}}">
               <md-card style="max-width:75%; border-radius: 10px; padding: 10px; font-size: 14px;" ng-style="message.sender=='BOT'?
@@ -22,7 +22,7 @@
                  <span
                   ng-bind-html="trust(message.feedResponse.description)">{{message.feedResponse.description}}
                  </span>
-                 <span layout-align="end end" style="margin-top: 4px; float: right; color: #666666 ; font-size: 10px;"> {{message.time}} </span>
+                 
              </md-card>
            </div>
    </md-content>
