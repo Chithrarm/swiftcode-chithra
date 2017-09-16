@@ -2,21 +2,7 @@ var app = angular.module('chatApp', ['ngMaterial']);
 
 app.controller('chatController', function ($scope,$sce) {
 
-   $scope.messages = [{
-           sender: "BOT",
-           text: "What can I do for you ?",
-           time:"1:15pm"
-       },
-       {
-           sender: "USER",
-           text: "What is 1 +1 ",
-           time:"1:18pm"
-       },
-       {
-           sender: "BOT",
-           text: "2",
-           time:"1:19pm"
-       }
+   $scope.messages = [     
    ];
 
    var  exampleSocket =  new  WebSocket("wss://swiftcode-chithra.herokuapp.com/chatSocket");
